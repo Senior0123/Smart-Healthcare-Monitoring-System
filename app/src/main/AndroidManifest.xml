@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SEND_NOTIFICATION" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_REMOTE_MESSAGING" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:enableOnBackInvokedCallback="true"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_logo_foreground"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SmartHCMS"
+        tools:targetApi="tiramisu">
+        <activity
+            android:name=".views.TwoStepVerification"
+            android:exported="false" />
+        <activity
+            android:name=".views.admin.UpdateData"
+            android:exported="false" />
+        <activity
+            android:name=".views.admin.PatientList"
+            android:exported="false" />
+        <activity
+            android:name=".views.admin.PatientAdminPanel"
+            android:exported="false" />
+        <activity
+            android:name=".views.admin.AdminHost"
+            android:exported="false" />
+        <activity
+            android:name=".views.nurse.PatientData"
+            android:exported="false" />
+        <activity
+            android:name=".views.nurse.NurseHost"
+            android:exported="false" />
+        <activity
+            android:name=".views.patient.PatientSigns"
+            android:exported="false" />
+        <activity
+            android:name=".views.patient.PatientHost"
+            android:exported="false" />
+        <activity
+            android:name=".views.patient.PatientHome"
+            android:exported="false" />
+        <activity
+            android:name=".views.Intro"
+            android:exported="false" />
+        <activity
+            android:name=".views.Login"
+            android:exported="false" />
+        <activity
+            android:name=".views.Forget"
+            android:exported="false" />
+        <activity
+            android:name=".views.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".views.patient.CreateAccount"
+            android:exported="false" />
+        <activity
+            android:name=".utils.NewNurseDialog"
+            android:exported="false" />
+        <activity
+            android:name="com.canhub.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <receiver android:name=".utils.NotificationReceiver" />
+
+        <service
+            android:name=".utils.NotificationService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="remoteMessaging" />
+    </application>
+
+</manifest>

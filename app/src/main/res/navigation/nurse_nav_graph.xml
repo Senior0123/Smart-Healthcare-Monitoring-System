@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nurse_nav_graph"
+    app:startDestination="@id/patientsInfoFragment">
+
+    <fragment
+        android:id="@+id/patientsInfoFragment"
+        android:name="com.example.smarthcms.views.nurse.PatientsInfo"
+        android:label="Patients Info"
+        tools:layout="@layout/fragment_patients_info" >
+        <action
+            android:id="@+id/action_patientsInfoFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_patientsInfoFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.smarthcms.views.nurse.Notifications"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notifications" >
+        <action
+            android:id="@+id/action_notificationsFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_notificationsFragment_to_patientsInfoFragment"
+            app:destination="@id/patientsInfoFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.smarthcms.views.Profile"
+        android:label="Profile"
+        tools:layout="@layout/profile_layout" >
+        <action
+            android:id="@+id/action_profileFragment_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_patientsInfoFragment"
+            app:destination="@id/patientsInfoFragment" />
+    </fragment>
+
+</navigation>

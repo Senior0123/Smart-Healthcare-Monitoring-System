@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "530920743725",
+    "firebase_url": "https://heartrate-9dc99-default-rtdb.firebaseio.com",
+    "project_id": "heartrate-9dc99",
+    "storage_bucket": "heartrate-9dc99.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:530920743725:android:3a225c192413a3117fe9a4",
+        "android_client_info": {
+          "package_name": "com.example.smarthcms"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeQRgMWJbkoQ-Ae9pAXD00lsHeSixLOhY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

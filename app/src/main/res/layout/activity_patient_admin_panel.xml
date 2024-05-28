@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    tools:context=".views.admin.PatientAdminPanel">
+
+    <include
+        android:id="@+id/wave"
+        layout="@layout/wave" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="17dp"
+        android:background="@drawable/patient_home_shape"
+        android:orientation="vertical"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wave">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_nurse"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FF000000"
+                android:importantForAccessibility="no"
+                android:src="@mipmap/ic_profile_foreground" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_nurseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/yara_ali"
+                    android:textColor="@color/main"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tv_workId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/work_id_1129"
+                    android:textColor="@color/texts"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_add_patient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="17dp"
+            android:gravity="start|center"
+            android:text="@string/add_patient"
+            android:textAllCaps="false"
+            android:textColor="@color/second"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="19dp"
+            app:icon="@mipmap/ic_add_foreground"
+            app:iconGravity="start"
+            app:iconPadding="8dp"
+            app:iconSize="40dp"
+            app:iconTint="@color/third"
+            app:strokeColor="@color/second"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_delete_patient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="17dp"
+            android:gravity="start|center"
+            android:text="@string/delete_patient"
+            android:textAllCaps="false"
+            android:textColor="@color/second"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="19dp"
+            app:icon="@mipmap/ic_delete_foreground"
+            app:iconGravity="start"
+            app:iconPadding="8dp"
+            app:iconSize="40dp"
+            app:iconTint="@color/third"
+            app:strokeColor="@color/second"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="17dp"
+            android:gravity="start|center"
+            android:text="@string/update_data"
+            android:textAllCaps="false"
+            android:textColor="@color/second"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="19dp"
+            app:icon="@mipmap/ic_update_foreground"
+            app:iconGravity="start"
+            app:iconPadding="8dp"
+            app:iconSize="40dp"
+            app:iconTint="@color/third"
+            app:strokeColor="@color/second"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_delete_nurse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="17dp"
+            android:gravity="start|center"
+            android:text="@string/delete_nurse"
+            android:textAllCaps="false"
+            android:textColor="@color/second"
+            android:textSize="21sp"
+            android:textStyle="bold"
+            app:backgroundTint="@color/white"
+            app:cornerRadius="19dp"
+            app:icon="@mipmap/ic_delete_foreground"
+            app:iconGravity="start"
+            app:iconPadding="8dp"
+            app:iconSize="40dp"
+            app:iconTint="@color/third"
+            app:strokeColor="@color/second"
+            app:strokeWidth="2dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

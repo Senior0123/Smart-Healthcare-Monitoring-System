@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/admin_nav_graph"
+    app:startDestination="@id/adminHubFragment">
+
+    <fragment
+        android:id="@+id/adminHubFragment"
+        android:name="com.example.smarthcms.views.admin.AdminHub"
+        android:label="Patients Info"
+        tools:layout="@layout/fragment_admin_hub" >
+        <action
+            android:id="@+id/action_patientsInfoFragment_to_profileFragment2"
+            app:destination="@id/profileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.smarthcms.views.Profile"
+        android:label="Profile"
+        tools:layout="@layout/profile_layout" >
+        <action
+            android:id="@+id/action_profileFragment_to_patientsInfoFragment2"
+            app:destination="@id/patientsInfoFragment" />
+    </fragment>
+
+</navigation>
